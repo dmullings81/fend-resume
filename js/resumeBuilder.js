@@ -2,7 +2,7 @@
 
 var bio = {
 	"name" : "Dimitris Mullings",
-	"role" : "Web Developer",
+	"role" : "Front-end Web Developer",
 	"contactInfo" : {
 	"email" : "dimitrimullings@hotmail.com",
 	"mobile" : "0081 (0)80 4119 9222",
@@ -128,8 +128,8 @@ bio.display = function() {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	$("#header").prepend(formattedName);
 
-	var formattedBiopic = HTMLbioPic.replace("%data%", bio.bioPic);
-	$("#header").append(formattedBiopic);
+//	var formattedBiopic = HTMLbioPic.replace("%data%", bio.bioPic);
+//	$("#header").append(formattedBiopic);
 
 	var formattedEmail = HTMLemail.replace("%data%", bio.contactInfo.email);
 	$("#topContacts").append(formattedEmail);
@@ -145,6 +145,7 @@ bio.display = function() {
 /*var formattedMessage = HTMLwelcomeMsg("%data%", bio.welcomeMessage);
 $("#header").append(formattedMessage);*/
 
+/*
 	$("#header").append(HTMLskillsStart);
 
 	if(bio.skills.length > 0) {
@@ -152,7 +153,7 @@ $("#header").append(formattedMessage);*/
 			var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
 			$("#skills").append(formattedSkill);
 		};
-	};
+	};*/
 };
 
 work.display = function() {

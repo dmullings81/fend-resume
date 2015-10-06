@@ -11,7 +11,7 @@ h5,
 h6 {
   padding:0;
   margin:0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .clear-fix {
@@ -29,6 +29,8 @@ h1 {
   color: white;
   line-height: 48px;
   display: inline;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 h2 {
@@ -113,7 +115,7 @@ a {
 }
 
 .white-text {
-  font-weight: bold;
+  /*font-weight: bold;*/
   color: #fff;
 }
 
@@ -138,11 +140,11 @@ a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px;
+  padding: 5px;
 }
 
 .center-content {
-  padding: 2.5% 5%;
+  padding: 0.3% 5%;
 }
 
 ul {
@@ -154,6 +156,7 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+  border-radius: 10px;
 }
 
 img {
@@ -162,10 +165,22 @@ img {
 
 span {
   padding: 5px;
+  color: white;
 }
 
 #lets-connect {
   text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #888;
+    background-image: linear-gradient(to right, #333, #888, #333);
+}
+
+hr:last-of-type {
+  margin-bottom: 0;
 }
 
 /* Media queries to handle various device widths */
@@ -211,4 +226,53 @@ span {
   .biopic {
     display: block;
   }
+}
+
+/* Nav Bar*/
+
+/* TODO: change to nav element*/
+
+.nav {
+  background-color: #272d2e;
+}
+.nav ul {
+      list-style: none;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+.nav li {
+      font-size: 1.2em;
+      line-height: 40px;
+      height: 40px;
+      border-bottom: 1px solid #888;
+    }
+    .nav a {
+      text-decoration: none;
+      color: white;
+      display: block;
+      margin-top: 0;
+      transition: .3s background-color;
+    }
+
+    .nav a:hover {
+      background-color: #005f5f;
+    }
+.nav a.active {
+      background-color: #fff;
+      color: #444;
+    }
+
+    @media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+/*    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;*/
+    display: inline-block;
+    margin-right: -4px;
+  }
+
+
 }
