@@ -256,7 +256,7 @@ hr:last-of-type {
     }
 
     .nav a:hover {
-      background-color: #005f5f;
+      background-color: #666666;
     }
 .nav a.active {
       background-color: #fff;

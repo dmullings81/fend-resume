@@ -89,7 +89,7 @@ var education = {
 			"name": "University of Derby",
 			"location": "Derby, UK",
 			"qualification": "Bachelor of Arts",
-			"majors": ["American Studies", "Film & TV Studies"],
+			"subjects": ["American Studies", " Film & TV Studies"],
 			"dates": "1999-2002",
 			"url": "http://www.derby.ac.uk/"
 		},
@@ -97,7 +97,7 @@ var education = {
 			"name": "Haywards Heath Sixth Form College",
 			"location": "Haywards Heath, UK",
 			"qualification" : "A-levels",
-			"majors": ["IT", "Mathematics", "Economics"],
+			"subjects": ["IT", " Mathematics", " Economics"],
 			"dates": "1997-1999",
 			"url": "http://www.centralsussex.ac.uk/14%2019/Sixth%20Form%20Haywards%20Heath"
 		},
@@ -105,6 +105,7 @@ var education = {
 			"name": "Oathall Community College",
 			"location": "Haywards Heath, UK",
 			"qualification" : "GCSEs",
+			"subjects": "Various",
 			"dates": "1992-1997",
 			"url": "http://www.oathall.org/"
 		}
@@ -207,22 +208,27 @@ education.display = function() {
 		var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
 		$(".education-entry:last").append(formattedName);
 
+		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
+		$(".education-entry:last").append(formattedDates);
+
 		var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
 		$(".education-entry:last").append(formattedLocation);
 
-		var formattedQualification = HTMLschoolDegree.replace("%data%", education.schools[school].qualification);
-		$(".education-entry:last").append(formattedQualification);
-
-		var formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
+		var formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[school].subjects);
 		$(".education-entry:last").append(formattedMajors);
 
-		// TODO: Sort out the way major and subjects looks
-
-		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
-		$(".education-entry:last").append(formattedDates);
+		var formattedQualification = HTMLschoolDegree.replace("%data%", education.schools[school].qualification);
+		$(".education-entry:last").append(formattedQualification);
 	}
 }
 
+$("#education:last").append(HTMLonlineClasses);
+
+/*for (online in education.onlineCourses) {
+
+var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title);
+$(".education-entry:last").append(formattedTitle);
+}*/
 // Invoke functions
 
 bio.display();
