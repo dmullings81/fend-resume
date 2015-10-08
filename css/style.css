@@ -1,3 +1,5 @@
+/* TODO: Work on responsive title*/
+
 body,
 div,
 ul,
@@ -43,8 +45,8 @@ h2 {
 
 h3 {
   font-style: italic;
-  font-size: 20px;
-  color: #000;
+  font-size: 18px;
+  color: #999;
   line-height: 22px;
 }
 
@@ -106,12 +108,15 @@ a {
   display: none;
 }
 
-.orange {
-  background-color: #f5ae23;
+.foot {
+  background-color: #272d2e;
+  color: white;
+  font-weight: 400;
+  font-size: 30px;
 }
 
-.orange-text {
-  color: red;
+.red-text {
+  color: #da020e;
 }
 
 .white-text {
@@ -126,7 +131,7 @@ a {
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #272d2e;
 }
 
 /* TODO: Replace with image later */

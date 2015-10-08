@@ -116,6 +116,12 @@ var education = {
 			"school": "Udacity",
 			"dates": "2015",
 			"url": "http://www.udacity.com/"
+		},
+		{
+			"title": "Learn JavaScript Fundamentals",
+			"school": "Microsoft Virtual Academy",
+			"dates": "2015",
+			"url": "http://www.microsoftvirtualacademy.com/"
 		}
 	]
 };
@@ -142,6 +148,11 @@ bio.display = function() {
 	$("#topContacts").append(formattedTwitter);
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contactInfo.location);
 	$("#topContacts").append(formattedLocation);
+
+	$("#footerContacts").append(formattedEmail);
+	$("#footerContacts").append(formattedMobile);
+	$("#footerContacts").append(formattedGithub);
+	$("#footerContacts").append(formattedTwitter);
 
 /*var formattedMessage = HTMLwelcomeMsg("%data%", bio.welcomeMessage);
 $("#header").append(formattedMessage);*/
@@ -219,26 +230,33 @@ education.display = function() {
 
 		var formattedQualification = HTMLschoolDegree.replace("%data%", education.schools[school].qualification);
 		$(".education-entry:last").append(formattedQualification);
-	}
-}
+	};
+};
 
-$("#education:last").append(HTMLonlineClasses);
 
-/*for (online in education.onlineCourses) {
+education.onlineCourses.display = function() {
+		$("#education").append(HTMLonlineClasses);
 
-var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[online].title);
-$(".education-entry:last").append(formattedTitle);
-}*/
+		for (var i = 0; education.onlineCourses.length > i; i++) {
+
+		$("#education").append(HTMLschoolStart);
+		var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title).replace("#", education.onlineCourses[i].url);
+		var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
+		var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates);
+		var courseTitle = formattedTitle + formattedSchool;
+		$(".education-entry:last").append(courseTitle);
+		$(".education-entry:last").append(formattedDates);
+	};
+
+};
 // Invoke functions
 
 bio.display();
 work.display();
 projects.display();
 education.display();
+education.onlineCourses.display();
 
 // Add Google Map
 
 $("#mapDiv").append(googleMap);
-
-/* TODO: this - 6. It’s possible to make additional information show up when you click on the pins in the map.
-Check out line 174 in helper.js and the Google Maps API to get started.*/
