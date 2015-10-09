@@ -1,5 +1,3 @@
-/* TODO: Work on responsive title*/
-
 body,
 div,
 ul,
@@ -32,7 +30,7 @@ h1 {
   line-height: 48px;
   display: inline;
   text-transform: uppercase;
-  font-weight: normal;
+  font-weight: 500;
 }
 
 h2 {
@@ -96,6 +94,11 @@ a {
   display: block;
 }
 
+.role {
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
 .welcome-message {
   font-style: italic;
   font-size: 18px;
@@ -104,7 +107,7 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #da020e;
   display: none;
 }
 
@@ -134,7 +137,6 @@ a {
   background-color: #272d2e;
 }
 
-/* TODO: Replace with image later */
 #header {
   background-color: #272d2e;
 }
@@ -161,11 +163,11 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
-  border-radius: 10px;
 }
 
 img {
   padding: 10px;
+  border-radius: 25px;
 }
 
 span {
@@ -235,24 +237,22 @@ hr:last-of-type {
 
 /* Nav Bar*/
 
-/* TODO: change to nav element*/
-
-.nav {
+nav {
   background-color: #272d2e;
 }
-.nav ul {
+nav ul {
       list-style: none;
       text-align: center;
       padding: 0;
       margin: 0;
     }
-.nav li {
+nav li {
       font-size: 1.2em;
       line-height: 40px;
       height: 40px;
       border-bottom: 1px solid #888;
     }
-    .nav a {
+    nav a {
       text-decoration: none;
       color: white;
       display: block;
@@ -260,21 +260,18 @@ hr:last-of-type {
       transition: .3s background-color;
     }
 
-    .nav a:hover {
+    nav a:hover {
       background-color: #666666;
     }
-.nav a.active {
+nav a.active {
       background-color: #fff;
       color: #444;
     }
 
     @media screen and (min-width: 600px) {
-  .nav li {
-    width: 120px;
+  nav li {
+    width: 150px;
     border-bottom: none;
-/*    height: 50px;
-    line-height: 50px;
-    font-size: 1.4em;*/
     display: inline-block;
     margin-right: -4px;
   }

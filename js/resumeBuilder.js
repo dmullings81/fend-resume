@@ -11,7 +11,7 @@ var bio = {
 	"location" : "Kofu, Japan"
 	},
 	"welcomeMessage" : "Welcome to my resume!",
-	"skills" : ["HTML5", "CSS3", "JavaScript", "Teaching"],
+	"skills" : ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "Git", "Grunt", "Sass", "WordPress", "Node.js", "Photoshop", "Teaching"],
 	"bioPic" : "images/profile.jpg"
 };
 
@@ -135,8 +135,12 @@ bio.display = function() {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	$("#header").prepend(formattedName);
 
-//	var formattedBiopic = HTMLbioPic.replace("%data%", bio.bioPic);
-//	$("#header").append(formattedBiopic);
+	var formattedBiopic = HTMLbioPic.replace("%data%", bio.bioPic);
+	$("#header").prepend(formattedBiopic);
+
+	var FormattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+	$("#header").append(FormattedWelcomeMsg);
+
 
 	var formattedEmail = HTMLemail.replace("%data%", bio.contactInfo.email);
 	$("#topContacts").append(formattedEmail);
@@ -154,10 +158,6 @@ bio.display = function() {
 	$("#footerContacts").append(formattedGithub);
 	$("#footerContacts").append(formattedTwitter);
 
-/*var formattedMessage = HTMLwelcomeMsg("%data%", bio.welcomeMessage);
-$("#header").append(formattedMessage);*/
-
-/*
 	$("#header").append(HTMLskillsStart);
 
 	if(bio.skills.length > 0) {
@@ -165,7 +165,7 @@ $("#header").append(formattedMessage);*/
 			var formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
 			$("#skills").append(formattedSkill);
 		};
-	};*/
+	};
 };
 
 work.display = function() {
