@@ -1,4 +1,4 @@
-//TODO: join up appends an prepends, tidy up CSS and html, maybe sort out welcome message
+//Consider using Classes instead of IDs as per Style Guide.
 
 // Object literals
 

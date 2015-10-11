@@ -59,10 +59,8 @@ h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
-
+  padding: 10px 5%;
 }
-
 
 .date-text {
   font-style: italic;
@@ -78,7 +76,6 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
 p {
@@ -99,16 +96,12 @@ a {
   font-size: 17px;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
-}
-
-#skills-h3 {
+.skills-h3 {
   color: #da020e;
   display: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 15px;
 }
 
 .foot {
@@ -123,14 +116,13 @@ a {
 }
 
 .white-text {
-  /*font-weight: bold;*/
   color: #fff;
 }
 
 .gray {
   background-color: #f3f3f3;
   padding-bottom: 10px;
-  clear:both;
+  clear: both;
 }
 
 .dark-gray {
@@ -175,6 +167,13 @@ span {
   color: white;
 }
 
+.welcome-message {
+  font-style: italic;
+  font-size: 18px;
+  color: #f3f3f3;
+  line-height: 28px;
+}
+
 #lets-connect {
   text-align: center;
 }
@@ -187,7 +186,7 @@ hr {
 }
 
 hr:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 /* Media queries to handle various device widths */
@@ -229,7 +228,7 @@ hr:last-of-type {
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
+  .skills-h3,
   .biopic {
     display: block;
   }
@@ -240,41 +239,42 @@ hr:last-of-type {
 nav {
   background-color: #272d2e;
 }
+
 nav ul {
-      list-style: none;
-      text-align: center;
-      padding: 0;
-      margin: 0;
-    }
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
 nav li {
-      font-size: 1.2em;
-      line-height: 40px;
-      height: 40px;
-      border-bottom: 1px solid #888;
-    }
-    nav a {
-      text-decoration: none;
-      color: white;
-      display: block;
-      margin-top: 0;
-      transition: .3s background-color;
-    }
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
 
-    nav a:hover {
-      background-color: #666666;
-    }
+nav a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  margin-top: 0;
+  transition: .3s background-color;
+}
+
+nav a:hover {
+  background-color: #666666;
+}
 nav a.active {
-      background-color: #fff;
-      color: #444;
-    }
+  background-color: #fff;
+  color: #444;
+}
 
-    @media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
   nav li {
     width: 150px;
     border-bottom: none;
     display: inline-block;
     margin-right: -4px;
   }
-
-
 }
