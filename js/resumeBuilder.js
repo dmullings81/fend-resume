@@ -1,13 +1,11 @@
-//Consider using Classes instead of IDs as per Style Guide.
-
 // Object literals
 
 var bio = {
 	"name" : "Dimitris Mullings",
 	"role" : "Front-end Web Developer",
 	"contactInfo" : {
-	"email" : "dimitrimullings@hotmail.com",
-	"mobile" : "0081 (0)80 4119 9222",
+	"email" : "myemail@email.com",
+	"mobile" : "0123 456 789",
 	"github" : "dmullings81",
 	"twitter" : "@dmullings81",
 	"location" : "Kofu, Japan"
@@ -20,28 +18,28 @@ var bio = {
 var work = {
 	jobs: [
 		{
-			"employer": "Future English School",
+			"employer": "English School",
 			"position": "Senior English Instructor",
 			"location": "Kofu, Japan",
 			"dates": "August 2010 - ongoing",
 			"description": "Taught English to students of all ages."
 		},
 		{
-			"employer": "P & O Ferries Ltd",
+			"employer": "Engineering Ltd",
 			"position": "Purchasing Assistant",
 			"location": "Dover, UK",
 			"dates": "April 2007 - August 2010",
 			"description": "Sourced Engineering procurement for a large company."
 		},
 		{
-			"employer": "Derby City Council Cultural Services",
+			"employer": "City Council Cultural Services",
 			"position": "Customer Service Assistant",
 			"location": "Derby, UK",
 			"dates": "May 2006 - March 2007",
 			"description": "Gave Customer Service."
 		},
 		{
-			"employer": "Journal Publishing Company",
+			"employer": "Publishing Company",
 			"position": "Junior Graphic Designer",
 			"location": "Derby, UK",
 			"dates": "February 2005 - April 2006",
@@ -55,13 +53,13 @@ var projects = {
 		{
 			"title": "Portfolio",
 			"dates": "September 2015",
-			"description": ["Single-page, responsive application built with Knockout.js framework and hosted on GitHub Pages.", "Developed a full-page map that loads with 20 popular bars and restaurants in Boston, MA.", "User can view recent pictures taken at each location (retrieved by AJAX request to Instagram API)."],
+			"description": ["Single page portfolio of work built using the Bootstrap framework."],
 			"images": []
 		},
 		{
 			"title": "Neighborhood Map",
 			"dates": "December 2014",
-			"description": ["Single-page, responsive application built with Knockout.js framework and hosted on GitHub Pages.", "Developed a full-page map that loads with 20 popular bars and restaurants in Boston, MA.", "User can view recent pictures taken at each location (retrieved by AJAX request to Instagram API)."],
+			"description": ["You will be provided with visual assets and a game loop engine; ", "using these tools you must add a number of entities to the game including the player characters and enemies to recreate the classic arcade game Frogger."],
 			"images": []
 		},
 		{
@@ -73,13 +71,13 @@ var projects = {
 		{
 			"title": "Health Tracker",
 			"dates": "September 2014",
-			"description": ["Created a responsive, single-page application to perform an HVAC engineering calculation.", "Reduced time for repetitive calculation, giving engineers more time to focus on problem-solving."],
+			"description": ["Using Backbone, you will develop a single page app that tracks the user's calorie intake, and optionally, other health-related metrics.", "Typing food names into the search field will display a list of matching foods as provided by the health API."],
 			"images": []
 		},
 		{
 			"title": "Website Optimization",
 			"dates": "November 2014",
-			"description": ["Optimized critical rendering path of existing website to achieve PageSpeed Insights score above 90.", "Eliminated inefficiencies in the website's scroll animation. Site now scrolls at 60 frames per second."],
+			"description": ["You will optimize a provided website with a number of optimization", " and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second."],
 			"images": []
 		},
 	]
