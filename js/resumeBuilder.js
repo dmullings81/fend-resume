@@ -1,3 +1,4 @@
+// TODO: abstract reused references as per feedback
 // Object literals
 
 var bio = {
@@ -16,7 +17,7 @@ var bio = {
 };
 
 var work = {
-	jobs: [
+	"jobs": [
 		{
 			"employer": "English School",
 			"position": "Senior English Instructor",
@@ -128,8 +129,11 @@ var education = {
 
 // Encapsulated functions
 
-bio.display = function() {
+var data = "%data%";
+var $header = "$('#header')"
 
+bio.display = function() {
+	"use strict";
 	var formattedRole = HTMLheaderRole.replace("%data%", this.role);
 	$("#header").prepend(formattedRole);
 	var formattedName = HTMLheaderName.replace("%data%", this.name);
@@ -147,11 +151,11 @@ bio.display = function() {
 	var formattedTwitter = HTMLtwitter.replace("%data%", this.contactInfo.twitter);
 	var formattedLocation = HTMLlocation.replace("%data%", this.contactInfo.location);
 
-	$("#topContacts").append(formattedEmail, formattedMobile, formattedGithub, formattedTwitter, formattedLocation);
-	$("#footerContacts").append(formattedEmail, formattedMobile, formattedGithub, formattedTwitter);
+	$("#topContacts, #footerContacts").append(formattedEmail, formattedMobile, formattedGithub, formattedTwitter);
+	$("#topContacts").append(formattedLocation);
 	$("#header").append(HTMLskillsStart);
 
-	if(this.skills.length > 0) {
+	if(this.skills.length) {
 		for(var i=0; i < this.skills.length; i++) {
 			var formattedSkill = HTMLskills.replace("%data%", this.skills[i]);
 			$("#skills").append(formattedSkill);
@@ -160,7 +164,8 @@ bio.display = function() {
 };
 
 work.display = function() {
-	for (job in this.jobs) {
+	for (var job in this.jobs) {
+		"use strict";
 		$("#workExperience").append(HTMLworkStart);
 
 		var formattedEmployer = HTMLworkEmployer.replace("%data%", this.jobs[job].employer);
@@ -181,7 +186,8 @@ work.display = function() {
 };
 
 projects.display = function() {
-	for (project in this.projects) {
+	for (var project in this.projects) {
+		"use strict";
 		$("#projects").append(HTMLprojectStart);
 
 		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", this.projects[project].title);
@@ -193,7 +199,7 @@ projects.display = function() {
 		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", this.projects[project].description);
 		$(".project-entry:last").append(formattedProjectDescription);
 
-		if (this.projects[project].images.length > 0) {
+		if (this.projects[project].images.length) {
 			for (project in this.projects) {
 				var formattedProjectImage = HTMLprojectImage.replace("%data%", this.projects[project].images);
 				$(".project-entry:last").append(formattedProjectImage);
@@ -204,7 +210,8 @@ projects.display = function() {
 
 education.display = function() {
 
-	for (school in this.schools) {
+	for (var school in this.schools) {
+		"use strict";
 		$("#education").append(HTMLschoolStart);
 
 		var formattedName = HTMLschoolName.replace("%data%", this.schools[school].name);
@@ -225,14 +232,15 @@ education.display = function() {
 };
 
 
-education.onlineCourses.display = function() {
+education.displayOC = function() {
+		"use strict";
 		$("#education").append(HTMLonlineClasses);
 
-		for (var i = 0; this.length > i; i++) {
+		for (var i = 0; education.onlineCourses.length > i; i++) {
 		$("#education").append(HTMLschoolStart);
-		var formattedTitle = HTMLonlineTitle.replace("%data%", this[i].title).replace("#", education.onlineCourses[i].url);
-		var formattedSchool = HTMLonlineSchool.replace("%data%", this[i].school);
-		var formattedDates = HTMLonlineDates.replace("%data%", this[i].dates);
+		var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[i].title).replace("#", education.onlineCourses[i].url);
+		var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[i].school);
+		var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[i].dates);
 		var courseTitle = formattedTitle + formattedSchool;
 		$(".education-entry:last").append(courseTitle);
 		$(".education-entry:last").append(formattedDates);
@@ -245,7 +253,7 @@ bio.display();
 work.display();
 projects.display();
 education.display();
-education.onlineCourses.display();
+education.displayOC();
 
 // Add Google Map
 
