@@ -4,14 +4,14 @@ var bio = {
 	"name" : "Dimitris Mullings",
 	"role" : "Front-end Web Developer",
 	"contactInfo" : {
-	"email" : "myemail@email.com",
-	"mobile" : "0123 456 789",
+	"email" : "dmullings81@gmail.com",
+	"mobile" : "0081 (0)80 4119 9222",
 	"github" : "dmullings81",
 	"twitter" : "@dmullings81",
 	"location" : "Kofu, Japan"
 	},
 	"welcomeMessage" : "Welcome to my resume!",
-	"skills" : ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "Git", "Grunt", "Sass", "WordPress", "Node.js", "Photoshop", "Teaching"],
+	"skills" : ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "Git", "Grunt", "Sass", "WordPress", "Node.js", "Jasmine testing", "Optimization", "Photoshop", "Teaching"],
 	"bioPic" : "images/profile.jpg"
 };
 
@@ -122,6 +122,48 @@ var education = {
 			"school": "Microsoft Virtual Academy",
 			"dates": "2015",
 			"url": "http://www.microsoftvirtualacademy.com/"
+		},
+		{
+			"title": "CSS: Page Layouts",
+			"school": "Lynda",
+			"dates": "2015",
+			"url": "http://www.lynda.com/"
+		},
+		{
+			"title": "Learn JavaScript Fundamentals",
+			"school": "Lynda",
+			"dates": "2015",
+			"url": "http://www.lynda.com/"
+		},
+		{
+			"title": "JavaScript for Web Designers",
+			"school": "Lynda",
+			"dates": "2015",
+			"url": "http://www.lynda.com/"
+		},
+		{
+			"title": "CSS Core Concepts",
+			"school": "Lynda",
+			"dates": "2014",
+			"url": "http://www.lynda.com/"
+		},
+		{
+			"title": "Web Design Fundamentals",
+			"school": "Lynda",
+			"dates": "2014",
+			"url": "http://www.lynda.com/"
+		},
+		{
+			"title": "Up and Running with HTML",
+			"school": "Lynda",
+			"dates": "2014",
+			"url": "http://www.lynda.com/"
+		},
+		{
+			"title": "Web Technology Fundamentals",
+			"school": "Lynda",
+			"dates": "2014",
+			"url": "http://www.lynda.com/"
 		}
 	]
 };
@@ -144,8 +186,8 @@ bio.display = function() {
 	var formattedBiopic = HTMLbioPic.replace(data, this.bioPic);
 	$header.prepend(formattedBiopic);
 
-	var FormattedWelcomeMsg = HTMLwelcomeMsg.replace(data, this.welcomeMessage);
-	$header.append(FormattedWelcomeMsg);
+	// var FormattedWelcomeMsg = HTMLwelcomeMsg.replace(data, this.welcomeMessage);
+	// $header.append(FormattedWelcomeMsg);
 
 	var formattedEmail = HTMLemail.replace(data, this.contactInfo.email);
 	var formattedMobile = HTMLmobile.replace(data, this.contactInfo.mobile);
